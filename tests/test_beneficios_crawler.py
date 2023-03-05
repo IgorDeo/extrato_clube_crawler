@@ -1,5 +1,5 @@
 from extrato_clube_crawler.beneficios_crawler import BeneficiosCrawler
-from extrato_clube_crawler.execptions import (
+from extrato_clube_crawler.exceptions import (
     CPFInvalido,
     CPFNaoInformado,
     LoginNaoInformado,

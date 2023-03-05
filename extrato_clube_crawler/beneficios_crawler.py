@@ -1,7 +1,7 @@
 from .cpf_validator import CPFValidator
 import json
 import requests
-from .execptions import (
+from .exceptions import (
     CPFInvalido,
     CPFNaoInformado,
     LoginNaoInformado,
