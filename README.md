@@ -35,3 +35,9 @@ pip install -r requirements.txt
 ```
 
 - O retorno será um array de dados com os números dos benefícios do cpf informado.
+
+
+## Teste de velocidade de Crawling:
+[<img src="images/velocidade.png">](https://prnt.sc/YtMumI3IshJl)
+
+- Foi observado uma média de 21ms para o crawling de um CPF.
