@@ -12,3 +12,7 @@ class LoginNaoInformado(Exception):
 
 class CPFNaoInformado(Exception):
     pass
+
+
+class CredenciaisInvalidas(Exception):
+    pass

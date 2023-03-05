@@ -6,6 +6,7 @@ from .exceptions import (
     CPFNaoInformado,
     LoginNaoInformado,
     SenhaNaoInformada,
+    CredenciaisInvalidas,
 )
 
 BASE_URL = """http://extratoblubeapp-env.eba-mvegshhd.sa-east-1.elasticbeanstalk.com"""
@@ -43,6 +44,8 @@ class BeneficiosCrawler:
     def get_authorization_token(self):
         form = json.dumps({"login": self.login, "senha": self.password})
         response = requests.post(LOGIN_URL, data=form)
+        if response.status_code == 401:
+            raise CredenciaisInvalidas("Credenciais de acesso inválidas")
         return response.headers.get("Authorization")
 
     def get_beneficios(self, token: str):
@@ -55,7 +58,7 @@ class BeneficiosCrawler:
     def parse_beneficios(self, dados: dict):
         numeros = []
         beneficios = dados.get("beneficios")
-        if beneficios is None:
+        if beneficios is None or len(beneficios) == 0:
             return numeros
 
         for beneficio in beneficios:
