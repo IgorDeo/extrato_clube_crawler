@@ -34,4 +34,4 @@ pip install -r requirements.txt
 }
 ```
 
-- O retorno será um array de dados com os números dos benefícios daquele
+- O retorno será um array de dados com os números dos benefícios do cpf informado.
