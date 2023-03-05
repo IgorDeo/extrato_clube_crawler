@@ -10,7 +10,7 @@ app = Flask(__name__)
 def consulta(cpf: str):
     body = request.get_json(force=True)
     login = body.get("login")
-    password = body.get("password")
+    password = body.get("senha")
     crawler = BeneficiosCrawler(cpf, login, password)
     beneficios = crawler.crawl()
     return beneficios
