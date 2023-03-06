@@ -40,4 +40,4 @@ pip install -r requirements.txt
 ## Teste de velocidade de Crawling:
 [<img src="images/velocidade.png">](https://prnt.sc/YtMumI3IshJl)
 
-- Foi observado uma média de 21ms para o crawling de um CPF.
+- Foi observado uma média de 15.8ms para o crawling de um CPF.
